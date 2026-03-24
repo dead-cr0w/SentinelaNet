@@ -19,7 +19,7 @@ bots_by_arch = {
 maxAttacks=30
 rootUser='root'
 
-# Não aumente de mais as threads (Você pode foder com seus bots)
+# Don't increase threads any further (It can fuck with your bots)
 threads=5
 
 ansi_clear = '\033[2J\033[H'
